@@ -43,7 +43,15 @@ module.exports = {
       }
 
       const token = jwt.sign({ id: user.id, username: user.username }, jwtSecret, { expiresIn: '1h' });
-      ctx.body = { message: 'Login successful', token, user: { id: user.id, username: user.username, email: user.email } };
+      ctx.body = {
+        message: 'Login successful',
+        token,
+        user: {
+          id: user.id,
+          username: user.username,
+          email: user.email,
+        },
+      };
     } catch (error) {
       ctx.status = 500;
       ctx.body = { message: 'Error logging in', error };
