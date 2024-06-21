@@ -18,7 +18,7 @@ To get started with the backend project, follow these steps:
 1. **Clone the repository:**
 
     ```sh
-    git clone git@github.com:RegisRivijski/quiz-rest.git
+    git clone https://github.com/RegisRivijski/quiz-rest.git
     ```
 
 2. **Navigate to the project directory:**
