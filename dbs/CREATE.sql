@@ -1,0 +1,34 @@
+CREATE DATABASE IF NOT EXISTS it_vocabulary;
+
+USE it_vocabulary;
+
+CREATE TABLE IF NOT EXISTS users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(50) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL,
+  email VARCHAR(100) NOT NULL UNIQUE
+);
+
+CREATE TABLE IF NOT EXISTS topics (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS terms (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  term VARCHAR(100) NOT NULL,
+  definition TEXT NOT NULL,
+  topic_id INT,
+  FOREIGN KEY (topic_id) REFERENCES topics(id)
+);
+
+CREATE TABLE IF NOT EXISTS quiz_results (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  term_id INT,
+  user_id INT,
+  user_answer INT,
+  is_correct BOOLEAN,
+  FOREIGN KEY (term_id) REFERENCES terms(id),
+  FOREIGN KEY (user_id) REFERENCES users(id),
+  FOREIGN KEY (user_answer) REFERENCES terms(id)
+);
