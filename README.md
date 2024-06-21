@@ -18,13 +18,13 @@ To get started with the backend project, follow these steps:
 1. **Clone the repository:**
 
     ```sh
-    git clone <repository-url>
+    git clone git@github.com:RegisRivijski/quiz-rest.git
     ```
 
 2. **Navigate to the project directory:**
 
     ```sh
-    cd backend
+    cd quiz-rest
     ```
 
 3. **Install dependencies:**
