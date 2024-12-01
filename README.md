@@ -33,17 +33,6 @@ To get started with the backend project, follow these steps:
     npm install
     ```
 
-4. **Set up the database:**
-
-    - Create a MySQL database and user.
-    - Update the `config/defaults.js` file with your database credentials.
-
-5. **Run the database migrations:**
-
-    ```sh
-    npm run migrate
-    ```
-
 ## Usage
 
 1. **Run the development server:**
@@ -65,7 +54,7 @@ To get started with the backend project, follow these steps:
     - **helpers**: Utility functions
     - **middlewares**: Custom middlewares
 - **index.js**: Entry point of the application
-- **migrations**: Database migration files
+- **dbs**: Database migration files
 
 ## Contributing
 
